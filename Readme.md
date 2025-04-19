@@ -13,10 +13,16 @@
   * 可进行测量优化,如: 减短窗口时间(1s),去除极值求平均值等数学方法.
   *
   * @IO
-  * 硬件串口(串口屏)     PC4 -> USART1_TX -> HMI_RX    PC5 -> USART1_RX -> HMI_TX
+  * 硬件串口            PC4 -> USART1_TX              PC5 -> USART1_RX
   * OLED显示(软件IIC)   PB8 -> SDA                    PB9 -> SCL
   * 按键中断            PC13-> KEY
   * 信号输入            PA0 -> TIM2_ETR -> Signal_IN
   *
+  * @模块接线
+  * OLED模块(软件IIC)  STM32G474RE
+  *      VCC   <------  5.0V      5V供电
+  *      GND   -------  GND       地
+  *      SCL   -------  PB9       IIC时钟线
+  *      SDA   -------  PB8       IIC数据线
   ******************************************************************************
   */
